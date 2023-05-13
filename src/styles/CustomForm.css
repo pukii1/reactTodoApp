@@ -1,0 +1,51 @@
+
+.form{
+  padding-top: 20px;
+  background-color: #E3E9FF;
+  border-radius:0px 0px 20px 20px;
+}
+.editForm{
+  background-color: white;
+}
+/* Input field */
+.inputField {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #ffffff;
+    font-size: 16px;
+    color: #333333;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+  .editInputField{
+    background-color:#E3E9FF;
+  }
+  /* Submit button */
+  button[type="submit"].btnSubmit {
+    padding: 12px;
+    border: none;
+    border-radius: 50%;
+    font-weight: bolder;
+    /*background-color: #0077CC;*/
+    font-size: 16px;
+    background-color: #AF7EEB;
+    color: white;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  button[type="submit"].btnEditSubmit{
+    color: #AF7EEB;
+    background-color: white;
+  }
+  button[type="submit"].btnSubmit:hover {
+    background-color: #8460b0;
+  }
+  button[type="submit"].btnEditSubmit:hover{
+    color:white;
+  }
+  

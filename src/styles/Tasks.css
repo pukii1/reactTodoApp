@@ -1,0 +1,83 @@
+#taskContainer{
+    margin: 40px 20px;
+}
+#taskContainer .task{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+button{
+    border: none;
+    background-color: white;
+    height:40px;
+}
+button:hover{
+    cursor: pointer;
+}
+.icon{
+    font-size: 15px;
+    background-color: white;
+    color: #AF7EEB;
+}
+.taskInfo{
+    flex-basis:70%;
+}
+
+.taskTitle, .taskDescription {
+    margin: 0;
+}
+.taskDescription{
+    font-size: 10px;
+}
+.notesContainer{
+    color: #AF7EEB;
+    margin:0px auto;
+    padding:10px;
+    width:50%;
+}
+.taskNote {
+    margin-bottom: 0px;
+    font-size:10px;
+  }
+
+/* Remove default checkbox styles */
+.completedCheck {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  /* Create custom checkbox */
+  .completedCheck:before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    border: 1px solid #999999;
+    border-radius: 3px;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 18px;
+    font-size: 14px;
+    color: transparent;
+  }
+  
+  /* Show checkmark when checked */
+.completedCheck:checked:before {
+    content: '\2713';
+    color: #ffffff;
+  }
+  
+  /*Cross out parent task when checked*/
+  .completedCheck:checked~div {
+    text-decoration: line-through;
+  }
+  /*Change edit + delete button color to show that theyre disabled*/
+  .completedCheck:checked~button .icon{
+    color: #a8a8a8;
+    }

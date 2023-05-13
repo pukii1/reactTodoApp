@@ -1,0 +1,18 @@
+
+.appTitle{
+  background-color:#AF7EEB;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  color: white;
+  padding:20px;
+  margin:0;
+}
+.tasksPlaceHolder{
+  color: #333333;
+
+}
+.tasksContainer{
+  background-color: white;
+  margin-top:40px;
+  padding:20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
