@@ -1,0 +1,24 @@
+/*import clr variables*/
+@import "./_colors.scss";
+
+
+.appTitle{
+  background-color: $purple-light;
+  @include  box-shadow;
+  color: $white;
+  padding:20px;
+  margin:0;
+}
+.tasksPlaceHolder{
+  color: $grey-dark;
+
+}
+.tasksContainer{
+  background-color: $white;
+  margin-top:40px;
+  padding:20px;
+  @include  box-shadow;
+}
+.inline{
+  display:inline;
+}

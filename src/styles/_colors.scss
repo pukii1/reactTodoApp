@@ -1,0 +1,46 @@
+/*SASS partial for main color definition*/
+$purple-light: #AF7EEB;
+$purple-dark: #8460b0;
+$grey-dark: #333333;
+$grey-mid: #999999;
+$grey-light: #a8a8a8;
+$blue-light: #E3E9FF;
+$white: #ffffff;
+
+/*style classes*/
+.bg-white{
+    background-color: $white;
+}
+.bg-purple-dark{
+    background-color: $purple-dark;
+}
+.bg-purple-light{
+    background-color: $purple-light;
+}
+.bg-blue-light{
+    background-color: $blue-light;
+}
+.txt-grey-dark{
+    color: $grey-dark;
+}
+.txt-purple-dark{
+    color: $purple-dark;
+}
+.txt-white{
+    color: $white;
+}
+
+.bg-transparent{
+    background-color: transparent;
+}
+
+/*mixins*/
+@mixin bg-button-hover{
+    background-color: $purple-dark;
+}
+@mixin bg-edit-button-hover{
+    background-color: $white;
+}
+@mixin box-shadow{
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
