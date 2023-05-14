@@ -1,21 +1,57 @@
-
-.appTitle{
-  background-color:#AF7EEB;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  color: white;
-  padding:20px;
-  margin:0;
+/*import clr variables*/ /*SASS partial for main color definition*/
+/*style classes*/
+.bg-white {
+  background-color: #ffffff;
 }
-.tasksPlaceHolder{
+
+.bg-purple-dark {
+  background-color: #8460b0;
+}
+
+.bg-purple-light {
+  background-color: #AF7EEB;
+}
+
+.bg-blue-light {
+  background-color: #E3E9FF;
+}
+
+.txt-grey-dark {
   color: #333333;
-
 }
-.tasksContainer{
-  background-color: white;
-  margin-top:40px;
-  padding:20px;
+
+.txt-purple-dark {
+  color: #8460b0;
+}
+
+.txt-white {
+  color: #ffffff;
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+/*mixins*/
+.appTitle {
+  background-color: #AF7EEB;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+  padding: 20px;
+  margin: 0;
+}
+
+.tasksPlaceHolder {
+  color: #333333;
+}
+
+.tasksContainer {
+  background-color: #ffffff;
+  margin-top: 40px;
+  padding: 20px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
-.inline{
-  display:inline;
-}
+
+.inline {
+  display: inline;
+}/*# sourceMappingURL=App.css.map */

@@ -59,30 +59,32 @@ export default function Customform() {
           //Clear the input fields
           taskTitleDescrRef.current.value = "";
           taskTitleInputRef.current.value = "";
+          //clear newTask container
+          setNewTask({});
         }
     }
 
 
   return (
     <div>
-      <form className="form" onSubmit={handleFormSubmit}>
-      <div className="input-container">
+      <form className="form bg-blue-light" onSubmit={handleFormSubmit}>
+      <div className="input-container ">
         <input 
-          className="inputField"
+          className="inputField txt-grey-dark bg-white"
           id="taskTitle" 
           type="text" 
           placeholder="Enter a new task..."
           onChange={onChangeTaskTitle}/>
           
           <input 
-          className="inputField"
+          className="inputField txt-grey-dark bg-white"
           id="taskDescr" 
           type="text" 
           placeholder="Describe your task..."
           onChange={onChangeTaskDescr}/>
       </div>
         
-        <button className="btnSubmit" type="submit"> 
+        <button className="btnSubmit bg-purple-light txt-white" type="submit"> 
           <FontAwesomeIcon icon={faPlus} />
         </button>
       </form>

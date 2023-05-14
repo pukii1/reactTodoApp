@@ -135,7 +135,7 @@ function App() {
       <div className="app">
         <h1 className="appTitle">Todo App</h1>
         <Customform/>
-        { state.tasks.length ? <div className="tasksContainer">
+        { state.tasks.length > 0 ? <div className="tasksContainer">
           {state.tasks.map( (t,i) => <Task key={i} idx={i} task={t}></Task>)}
         </div> : <p className="tasksPlaceHolder">Wow... such empty....</p> }
         

@@ -1,56 +1,98 @@
-.taskContainer {
-  margin: 20px auto;
-  padding: 50px;
-  border-radius: 25px;
-  position: relative;
-  width: 30%;
+@charset "UTF-8";
+/*import clr variables*/ /*SASS partial for main color definition*/
+/*style classes*/
+.bg-white {
+  background-color: #ffffff;
 }
 
-.task {
-  display: inline;
+.bg-purple-dark {
+  background-color: #8460b0;
 }
 
-.btnDelete {
-  /*Border props*/
-  border: none;
-  border-radius: 5px;
-  background-color: #dd1f1f;
-  /*sizing*/
-  padding: 10px 20px;
-  width: 20%;
+.bg-purple-light {
+  background-color: #AF7EEB;
+}
 
-  /*font props*/
-  font-size: 16px;
-  text-align: center;
-  cursor: pointer;
+.bg-blue-light {
+  background-color: #E3E9FF;
+}
 
-  /*color + appearance*/
-  opacity: 0;
-  color: #d1d1d1;
+.txt-grey-dark {
+  color: #333333;
+}
 
-  /*position*/
-  box-sizing: border-box;
-  position: absolute;
-  right: -30%;
-  top: 50%;
+.txt-purple-dark {
+  color: #8460b0;
+}
 
-  /*childrens position*/
-  justify-content: center;
-  align-items: center;
+.txt-white {
+  color: #ffffff;
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+/*mixins*/
+#taskContainer {
+  margin: 40px 20px;
+}
+
+#taskContainer .task {
+  width: 80%;
+  margin: 0 auto;
   display: flex;
-
-  /*transitions*/
-  transform: translateY(-50%);
-  transition: all 0.3s ease;
-
+  justify-content: space-around;
 }
 
-.taskContainer:hover .btnDelete {
-  right: 15%;
-  opacity: 1;
+button {
+  border: none;
+  height: 40px;
 }
 
-/* This CSS code assumes that you have an HTML input element with type="checkbox" in your React component */
+button:hover {
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 15px;
+  color: #AF7EEB;
+}
+
+.taskInfo {
+  flex-basis: 70%;
+}
+
+.taskTitle, .taskDescription {
+  margin: 0;
+}
+
+.taskDescription {
+  font-size: 10px;
+}
+
+.notesContainer {
+  color: #AF7EEB;
+  margin: 0px auto;
+  padding: 10px;
+  width: 70%;
+}
+
+.taskNote {
+  margin: 0;
+  text-align: start;
+  font-size: 10px;
+  height: 15px;
+}
+
+.noteContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnDeleteNote {
+  height: 15px;
+}
 
 /* Remove default checkbox styles */
 .completedCheck {
@@ -64,7 +106,7 @@
 
 /* Create custom checkbox */
 .completedCheck:before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 18px;
   height: 18px;
@@ -80,10 +122,16 @@
 
 /* Show checkmark when checked */
 .completedCheck:checked:before {
-  content: '\2713';
+  content: "✓";
   color: #ffffff;
 }
 
-#taskContainer .task .completedCheck:checked + p{
+/*Cross out parent task when checked*/
+.completedCheck:checked ~ div {
   text-decoration: line-through;
 }
+
+/*Change edit + delete button color to show that theyre disabled*/
+.completedCheck:checked ~ button .icon {
+  color: #a8a8a8;
+}/*# sourceMappingURL=Task.css.map */

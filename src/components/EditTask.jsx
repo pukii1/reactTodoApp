@@ -1,4 +1,5 @@
 import React from 'react'
+import '../styles/CustomForm.css';
 import { useState, useEffect, useRef } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
@@ -39,24 +40,25 @@ const onChangeTaskDescr = (e)=>{
 
   return (
     <div>
-        <form className="form editForm" onSubmit={(e)=>{e.preventDefault();editTask(idx, newTask.title, newTask.descr); disableEdit()}}>
+        <form className="form bg-white" 
+              onSubmit={(e)=>{e.preventDefault();editTask(idx, newTask.title, newTask.descr); disableEdit()}}>
       <div className="input-container">
         <input 
-          className="inputField editInputField"
+          className="inputField bg-blue-light"
           id="newTaskTitle" 
           type="text" 
           placeholder="Change the title of your task..."
           onChange={onChangeTaskTitle}/>
           
           <input 
-          className="inputField editInputField"
+          className="inputField bg-blue-light"
           id="newTaskDescr" 
           type="text" 
           placeholder="Change the description of your task..."
           onChange={onChangeTaskDescr}/>
       </div>
         
-        <button className="btnSubmit btnEditSubmit" type="submit">
+        <button className="btnSubmit txt-white bg-purple-light" type="submit">
           <FontAwesomeIcon icon={faPlus} />
         </button>
       </form>
