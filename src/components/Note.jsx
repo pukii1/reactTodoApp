@@ -1,4 +1,6 @@
 import React from 'react'
+import '../styles/CustomForm.css';
+
 import {useContext} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes} from '@fortawesome/free-solid-svg-icons';
@@ -19,7 +21,7 @@ export default function Note({deleteNote, note, idx, taskIdx}) {
         if(!disableNotesFlag){
           deleteNote(idx, taskIdx)}
         }}>
-                  <FontAwesomeIcon className="icon" icon={faTimes} />
+                  <FontAwesomeIcon className="bg-transparent icon" icon={faTimes} />
         </button>
     </div>
   )

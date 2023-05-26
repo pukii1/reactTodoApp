@@ -36,12 +36,16 @@ const onChangeTaskDescr = (e)=>{
 }
 
 
-
+const editSubmit = (e)=>{
+  e.preventDefault();
+  editTask(idx, newTask.title, newTask.descr); 
+  disableEdit()
+}
 
   return (
     <div>
         <form className="form bg-white" 
-              onSubmit={(e)=>{e.preventDefault();editTask(idx, newTask.title, newTask.descr); disableEdit()}}>
+              onSubmit={editSubmit}>
       <div className="input-container">
         <input 
           className="inputField bg-blue-light"
@@ -58,7 +62,7 @@ const onChangeTaskDescr = (e)=>{
           onChange={onChangeTaskDescr}/>
       </div>
         
-        <button className="btnSubmit txt-white bg-purple-light" type="submit">
+        <button className="btnSubmit bg-transparent txt-white bg-purple-light" type="submit">
           <FontAwesomeIcon icon={faPlus} />
         </button>
       </form>
